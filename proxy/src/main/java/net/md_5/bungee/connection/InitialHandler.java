@@ -142,11 +142,12 @@ public class InitialHandler extends PacketHandler implements PendingConnection
     }
 
     @Override
-    public void handle(PacketWrapper packet) throws Exception
+    public void handle(PacketWrapper packet)
     {
         if ( packet.packet == null )
         {
-            throw new QuietException( "Unexpected packet received during login process! " + BufUtil.dump( packet.buf, 16 ) );
+            Log.i("Packet is null!")
+            return void;
         }
     }
 
